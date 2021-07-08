@@ -5,5 +5,7 @@ include 'parts/functions/variables.php';
 include 'parts/functions/config_disable_head_footer_tags.php';
 include 'parts/functions/config_upload_image_size.php';
 include 'parts/functions/config_upload_media_name.php';
+include 'parts/functions/helper_namespace.php';
+include 'parts/functions/helper_svgsprite.php';
 include 'parts/functions/helper_webpack.php';
 include 'parts/functions/feature_template.php';

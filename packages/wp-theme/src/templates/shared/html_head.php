@@ -36,5 +36,5 @@
 
   <?php wp_head(); ?>
 </head>
-<body data-namespace="<%= htmlWebpackPlugin.options.namespace %>">
+<body data-namespace="<?= helper_get_namespace() ?>">
   <?php pj_body_prepend();

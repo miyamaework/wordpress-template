@@ -17,6 +17,11 @@ include 'shared/html_head.php';
     <h2>staticディレクトリのファイル取得</h2>
     <img src="<?= helper_webpack_get_static_path('favicon.png') ?>" width="100" height="100" />
   </section>
+
+  <section>
+    <h2>SVG Spriteの出力</h2>
+    <?= helper_svgsprite('iconTwitter') ?>
+  </section>
 </main>
 
 <?php include 'shared/html_end.php';
