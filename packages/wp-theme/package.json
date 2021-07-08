@@ -1,0 +1,53 @@
+{
+  "name": "wp-theme",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "dev-webpack": "webpack -w --stats-children",
+    "dev-server": "node webpack/server.js",
+    "dev": "NODE_ENV=development npm-run-all --silent --parallel dev-webpack dev-server",
+    "typecheck": "tsc -p . --noEmit",
+    "prettier-php": "prettier '**/*.php' --check",
+    "prettier-php:fix": "prettier '**/*.php' --write",
+    "eslint": "eslint '**/*.{js,jsx}'",
+    "eslint:fix": "eslint '**/*.{js,jsx}' --fix",
+    "stylelint": "stylelint '**/*.{css,scss}'",
+    "stylelint:fix": "stylelint '**/*.{css,scss}' --fix",
+    "lint": "npm run prettier-php && npm run eslint && npm run stylelint"
+  },
+  "dependencies": {
+    "core-js": "^3.15.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/mini-css-extract-plugin": "^2.0.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.6",
+    "eslint-config-pj": "file:../eslint-config-pj",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.1",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "stylelint-config-pj": "file:../stylelint-config-pj",
+    "svg-sprite-loader": "^6.0.9",
+    "svgo": "^2.3.1",
+    "svgo-loader": "^3.0.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-manifest-plugin": "^3.1.1"
+  }
+}

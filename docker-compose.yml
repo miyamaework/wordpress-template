@@ -1,0 +1,34 @@
+version: '3.5'
+services:
+  wp:
+    image: wordpress
+    restart: always
+    env_file: .env
+    volumes:
+      - ./wordpress/volumes/app:/var/www/html:cached
+    ports:
+      - 9001:80
+    links:
+      - wp-db
+
+  wp-cli:
+    image: wordpress:cli
+    volumes:
+      - ./wordpress/volumes/app:/var/www/html/
+    links:
+      - wp-db
+
+  wp-db:
+    image: mysql:5.7
+    restart: always
+    env_file: .env
+    ports:
+      - 3310:3306
+    volumes:
+      - ./wordpress/volumes/sql:/docker-entrypoint-initdb.d
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
+      - 1025:1025

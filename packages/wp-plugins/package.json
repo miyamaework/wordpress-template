@@ -1,0 +1,17 @@
+{
+  "name": "wp-plugins",
+  "private": true,
+  "scripts": {
+    "prettier-php": "prettier '**/*.php' --check",
+    "prettier-php:fix": "prettier \"src/**/*.php\" --write",
+    "eslint": "eslint '**/*.{js,jsx}'",
+    "eslint:fix": "eslint '**/*.{js,jsx}' --fix",
+    "stylelint": "stylelint '**/*.{css,scss}'",
+    "stylelint:fix": "stylelint '**/*.{css,scss}' --fix",
+    "lint": "npm run prettier-php && npm run eslint && npm run stylelint"
+  },
+  "devDependencies": {
+    "eslint-config-pj": "file:../eslint-config-pj",
+    "stylelint-config-pj": "file:../stylelint-config-pj"
+  }
+}

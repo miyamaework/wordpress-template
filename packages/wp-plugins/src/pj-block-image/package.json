@@ -1,0 +1,11 @@
+{
+  "name": "pj-block-image",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build",
+    "dev": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "16.1.4"
+  }
+}

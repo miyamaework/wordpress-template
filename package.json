@@ -1,0 +1,34 @@
+{
+  "name": "wp-template-base",
+  "private": true,
+  "engines": {
+    "node": "v15.14.0",
+    "npm": ">=7.19"
+  },
+  "scripts": {
+    "dump-wp-dev": "./scripts/wp-dump-dev.sh",
+    "wp-theme:dev": "npm run dev -w packages/wp-theme",
+    "wp-theme:build": "npm run build -w packages/wp-theme",
+    "wp-plugin:block-image:dev": "npm run dev --workspace=packages/wp-plugins/src/pj-block-image",
+    "wp-plugin:block-image:build": "npm run build --workspace=packages/wp-plugins/src/pj-block-image",
+    "wp-plugins:copy": "./scripts/copy-plugins.sh",
+    "wp-plugins:copy-watch": "chokidar \"packages/wp-plugins/**/*\" -c \"npm run wp-plugins:copy\" --initial --silent",
+    "wp-plugins:dev": "run-p wp-plugin:*:dev wp-plugins:copy-watch",
+    "wp-plugins:build": "run-s wp-plugin:*:build wp-plugins:copy",
+    "lint": "npm run lint --workspaces"
+  },
+  "workspaces": [
+    "packages/eslint-config-pj",
+    "packages/eslint-config-pj-react",
+    "packages/stylelint-config-pj",
+    "packages/wp-plugins",
+    "packages/wp-plugins/src/pj-block-image",
+    "packages/wp-theme"
+  ],
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.17.2",
+    "chokidar-cli": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2"
+  }
+}

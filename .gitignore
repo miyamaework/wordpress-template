@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+.DS_Store
+.idea/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env.production
+
+# WordPress開発ファイル関連
+packages/wp-plugins/src/*/build
+wordpress/volumes/app/wp-content/plugins/pj-*
+wordpress/volumes/app/wp-content/themes/pj-*
+wordpress/volumes/app/wp-content/uploads

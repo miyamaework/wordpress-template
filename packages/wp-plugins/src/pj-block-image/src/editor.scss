@@ -1,0 +1,28 @@
+// ===========================================
+// 管理画面用のスタイルシート
+// ===========================================
+
+.cpa-adminBlockImage {
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #eee;
+}
+
+.cpa-adminBlockImage_buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cpa-adminBlockImage_imageWrapper {
+  .cpa-adminBlockImage_buttonGroup + & {
+    margin-top: 20px;
+  }
+}
+
+.js-cpaBlockImage {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

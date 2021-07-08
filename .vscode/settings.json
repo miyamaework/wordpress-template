@@ -1,0 +1,33 @@
+{
+  "search.exclude": {
+    "wordpress/**": true,
+  },
+  "files.associations": {
+    "*.ejs": "php",
+  },
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+  ],
+  "eslint.workingDirectories": [
+    "./packages/eslint-config-pj",
+    "./packages/eslint-config-pj-react",
+    "./packages/stylelint-config-pj",
+    "./packages/wp-plugins",
+    "./packages/wp-plugins/src/block-image",
+    "./packages/wp-theme"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "prettier.documentSelectors": [
+    "**/*.php",
+  ],
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+}

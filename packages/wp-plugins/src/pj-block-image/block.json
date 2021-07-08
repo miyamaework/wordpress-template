@@ -1,0 +1,34 @@
+{
+  "apiVersion": 2,
+  "name": "pj-block/pj-block-image",
+  "title": "BlockImage",
+  "description": "ダイナミックブロック開発サンプル",
+  "category": "widgets",
+  "icon": "smiley",
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "alignWide": false,
+    "spacing": false
+  },
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "preview": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "content": "画像のパフォーマンスを最適化して表示します。"
+    }
+  },
+  "textdomain": "pj-block-image",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}
