@@ -14,8 +14,7 @@
     "wp-plugins:copy": "./scripts/copy-plugins.sh",
     "wp-plugins:copy-watch": "chokidar \"packages/wp-plugins/**/*\" -c \"npm run wp-plugins:copy\" --initial --silent",
     "wp-plugins:dev": "run-p wp-plugin:*:dev wp-plugins:copy-watch",
-    "wp-plugins:build": "run-s wp-plugin:*:build wp-plugins:copy",
-    "lint": "npm run lint --workspaces"
+    "wp-plugins:build": "run-s wp-plugin:*:build wp-plugins:copy"
   },
   "workspaces": [
     "packages/eslint-config-pj",
